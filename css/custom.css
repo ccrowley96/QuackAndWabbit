@@ -1,0 +1,188 @@
+/* your styles go here */
+.jumbo
+ {
+  background-image: url('../img/subtle.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height:100vh;
+}
+
+@media (max-width: 991px) {
+  .jumbo
+   {
+    padding: 20px;
+  }
+}
+.jumbo
+ .container {
+  position: relative;
+  z-index: 2;
+}
+.jumbo .jumboTitle h1{
+  color:white;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.jumbo .jumboTitle img{
+  color:white;
+  padding-top: 0px;
+}
+.jumbo
+ p.social {
+  text-align: center;
+  margin-top: 20px;
+}
+.jumbo
+ p.social a {
+  margin: 0 10px 0 0;
+  color: #fff;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  line-height: 26px;
+  font-size: 15px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  vertical-align: bottom;
+}
+.jumbo
+ p.social a i {
+  vertical-align: bottom;
+  line-height: 26px;
+}
+.jumbo
+ p.social a.facebook {
+  background-color: #4460ae;
+}
+.jumbo
+ p.social a.gplus {
+  background-color: #c21f25;
+}
+.jumbo
+ p.social a.twitter {
+  background-color: #3cf;
+}
+.jumbo
+ p.social a.instagram {
+  background-color: #cd4378;
+}
+.jumbo
+ p.social a.email {
+  background-color: #4a7f45;
+}
+@media (max-width: 991px) {
+  .jumbo
+   p.social {
+    text-align: center;
+  }
+}
+.jumbo
+ .cursive {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 60px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 0.13em;
+}
+@media (max-width: 991px) {
+  .jumbo
+   .cursive {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .jumbo
+   .cursive {
+    font-size: 30px;
+  }
+}
+.jumbo
+ .sub {
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+@media (max-width: 991px) {
+  .jumbo
+   .sub {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .jumbo
+   .sub {
+    font-size: 20px;
+  }
+}
+.jumbo
+ .transparent {
+  background: rgba(255, 255, 255, 0.3);
+  border: solid 1px #fff;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.jumbo
+ .footer {
+  color: #eee;
+}
+
+.jumbotron {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-bottom: 0px;
+  /*background-image: url('../img/subtle.png');*/
+  background-image: url('../img/cloudy-day.png');
+}
+#navbar{
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.navbar-fixed-top{
+  width:100%;
+  background-color: linen;
+  background: rgba(0, 0, 0, 0.99);
+}
+.fixed-links{
+  padding-right: 16px;
+}
+.navbar{
+  margin-bottom: 0px;
+  background-color: linen;
+  background: rgba(0, 0, 0, 0.99);
+  border-color: black;
+  border-width: 2px;
+  color:white;
+}
+.navbar-header{
+  color:white;
+}
+.navbar-custom .navbar-header a{
+  color:white;
+}
+.navbar-custom .navbar-header a:hover,
+.navbar-custom .navbar-header a:active,
+.navbar-custom .navbar-header a:focus
+{
+  color:#18BC9C;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus,
+{
+  background-color: blue;
+}
+.navbar-custom .navbar-nav li a
+{
+  color:white;
+}
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li a:focus
+{
+  color:#18BC9C;
+}
