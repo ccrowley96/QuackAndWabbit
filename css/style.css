@@ -82,11 +82,16 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 #header-container{ border-bottom: 20px solid #e44d26; }
 #footer-container{ border-top:    20px solid #e44d26; }
 #main aside      { border-top:    20px solid #e44d26; }
+#main .aside2    { border-top:    20px solid #8fc9c6; }
+
 
 #header-container,
 #footer-container,
 #main aside{
 	background:#f16529;
+}
+#main .aside2{
+	background:#d7eceb;
 }
 
 #title{ color:white; }
