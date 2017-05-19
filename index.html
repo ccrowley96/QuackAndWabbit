@@ -58,12 +58,12 @@
 
 <!--Jumbotron Header -->
 <div class = "jumbo jumbotron jumbotron-fluid" id = "jumbo">
-  <div class = "overlay">
-      <div class="container">
+      <div class="container-fluid">
         <p class="social">
         <a href="https://www.facebook.com/quackandwabbit/?ref=br_rs" title="" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="mailto:quackandwabbit@hotmail.com" title="" class="instagram"><i class="fa fa-envelope"></i></a>
         </p>
+        <div class = "container-fluid">
         <div class="jumboTitle row">
           <div class="col-sm-12">
             <h1 class="cursive text-center" style = "color:black;font-family: 'Indie Flower', cursive; text-transform: lowercase;  text-transform: capitalize; font-size: 8vw">Quack &amp; Wabbit</h1>
@@ -73,14 +73,16 @@
             </div>
           </div>
         </div>
+        </div><!--end container fluid-->
       </div>
-  </div>
+  
 </div>
 
 <!-- Navigation -->
 <div id = "nav_bar" class = "navbar-custom">
-<nav class = "row navbar navbar-default">
 <div class = "container-fluid">
+<nav class = "row navbar navbar-default">
+
   
   <div class = "navbar-header">
   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -99,10 +101,11 @@
       <li><a href="#footer-container" class = "XX">Contact Us</a></li>
     </ul>
    </div>
-</div>
+
 
 
 </nav>
+</div>
 </div>
 	
 	<div id="about-container" style = "background-color: linen;">
@@ -304,7 +307,7 @@ $('.navbar-collapse ul li a').click(function(){
     if ($(window).scrollTop() > d.prop("scrollHeight") ) {
       $('#nav_bar').addClass('navbar-fixed-top');
       $('#linkList').addClass('fixed-links');
-      $('body').css('margin-top','50px');
+      $('body').css('margin-top','53.8px');
     }
     if ($(window).scrollTop() < d.prop("scrollHeight")) {
       $('#nav_bar').removeClass('navbar-fixed-top');
