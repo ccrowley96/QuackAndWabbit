@@ -65,10 +65,52 @@
     border-width: 1px;
 	} 
 
+	.jumbo .jumboTitle img{
+	position:absolute;
+	width:35vw; 
+	height:45vh;
+	left:0;
+	right:0; 
+	margin: auto; 
+	border-radius: 47%;   
+	box-shadow: 10px 10px 5px grey;
+	}
+
+
+	@media (max-width: 400px){
+		.jumbo .jumboTitle img{
+			position:relative;
+			display:block;
+			margin: auto;
+			width:70vw;
+			height:70vw;
+			margin-top: 50px;
+
+			
+		}
+	}
+	.jumbo .scrolldown{
+		width: 50%;
+		position: absolute;
+		bottom:0px;
+		left:0;
+		right:0;
+		margin: 0 auto;
+	}
 	</style>
+	
 
 </head>
 <body>
+<!-- Facebook Javascript SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=854767494646378";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!--Jumbotron Header -->
 <div class = "jumbo jumbotron jumbotron-fluid" id = "jumbo">
@@ -81,21 +123,23 @@
         <div class="jumboTitle row">
           <div class="col-sm-12">
             <h1 class="cursive text-center" style = "color:black;font-family: 'Indie Flower', cursive; text-transform: lowercase;  text-transform: capitalize; font-size: 8vw">Quack &amp; Wabbit</h1>
-            <img src = "img/qwlogo.png" style = "width:300px; height:300px; display: block; margin: auto; margin-bottom:0px; border-radius: 47%;   box-shadow: 10px 10px 5px grey;">
-            <div class = "scrolldown" style = "width: 50%; position: relative; display: block; margin:auto; margin-top: 50px;">
-            <p class = "text-center"><a class = "XX" href = "#about-container"><i class="arrow fa fa-angle-down fa-5x" style = "color: rgba(25, 25, 25, .7);" aria-hidden="true"></i></a></p>
-            </div>
+            <img src = "img/qwlogo.png">
+            
           </div>
         </div>
       </div>
   </div>
+  		<div class = "scrolldown">
+            <p class = "text-center"><a class = "XX" href = "#about-container"><i class="arrow fa fa-angle-down fa-5x" style = "color: rgba(25, 25, 25, .7);" aria-hidden="true"></i></a></p>
+        </div>
 </div>
 
 <!-- Navigation -->
-<div class = "nav-wrapper" style = "height:54px;">
+<div class = "nav-wrapper" style = "height:54px;" >
 <div id = "nav_bar" class = "navbar-custom">
-<nav class = "row navbar navbar-default">
 <div class = "container-fluid">
+<nav class = "row navbar navbar-default">
+
   
   <div class = "navbar-header">
   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -111,25 +155,27 @@
     <ul class = "nav navbar-nav navbar-right" id = "linkList">
       <li ><a href="#about-container" class = "XX">About Us</a></li>
       <li><a href="#shows-container" class ="XX">Our Work</a></li>
+      <li><a href="#gallery-container" class ="XX">Gallery</a></li>
       <li><a href="#footer-container" class = "XX">Contact Us</a></li>
     </ul>
    </div>
 </div>
 
-
-</nav>
 </div>
+</nav>
+
 </div><!--End Wrapper-->
 	
 	<div id="about-container" style = "background-color: linen;">
 		<div id="main" class="wrapper clearfix">
-			
-			
+			<div class = "container-fluid">
+				<div class = "row">
+				<div class = "col-sm-12 col-md-6">
 				<header>
 					<h1>About Us</h1>
 					<p>We are Tanya Crowley and Yumi Ozaki, program directors and performers for the northern California puppetry troupe, Quack and Wabbit Puppet Theatre.  Occupational therapists by trade, we cofounded Quack &amp; Wabbit Puppet Theatre because of our love of puppetry and because we discovered the effectiveness of puppetry in therapy sessions.  By using puppetry to teach, children learned the skills being taught more quickly while having fun.  We use our professional quality, handmade puppets to teach children positive messages and life skills.  Our humorous, musical, poignant and tender-hearted stories yield emotional responses in children, enhancing their learning experience.
 
-</p>
+				</p>
 				</header>
 				<section>
 					<h3>What do we do?</h3>
@@ -137,6 +183,13 @@
 					<br></br>
                     Our puppet theater performances include both original musical versions of classic children’s stories and educational programs which teach valuable life skills.  In the past, we have partnered with Fire Pals, a nationally recognized fire and child safety organization to teach traffic safety, bike safety, earthquake safety, and water and fire safety.  We have worked with Humboldt Del Norte Dental Society to create a program that teaches children about oral health.  In collaboration with Ink People, Garfield and Freshwater School Districts, McLean Foundation, and JAMS Foundation, we have created two bullying prevention puppetry programs that teach tolerance and compassionate communication.</p>
 				</section>
+				</div>
+				<div class = "col-sm-12 col-md-6">
+				<div class="fb-page" data-href="https://www.facebook.com/quackandwabbit/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/quackandwabbit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/quackandwabbit/">Quack and Wabbit Puppet Theatre</a></blockquote></div>
+				</div>
+			</div>
+			
+				
 				<section>
 					<h3>Mission Statement</h3>
 					<p>Our purpose is to promote a positive difference in the lives of children by teaching valuable life skills through the art of puppetry. Our hope is that we will begin to make a difference in children’s lives by working together with teachers and students to create a safe, peaceful and compassionate climate in the schools and our community.<p>
@@ -153,7 +206,7 @@
 					<br>
 					– To provide training and tools for teachers and students to use which encourage a safe and compassionate climate in the classroom and the community through our theater programs, workshops, discussions and educational material.<p>
 
-</p>
+					</p>
 				</section>
 			
 			
@@ -226,69 +279,105 @@
 	    <ol class="indicator"></ol>
 	</div>
 	<!-- Actual Gallery Images -->
-	<div class = "container-fluid text-center" style = "background-color: black;">
-	<div id="links">
-    <a href="img/gallery17.jpg" title="Banana">
-        <img src="img/thumb/gallery17.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery5.jpg" title="Banana">
-        <img src="img/thumb/gallery5.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery6.jpg" title="Banana">
-        <img src="img/thumb/gallery6.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery7.jpg" title="Banana">
-        <img src="img/thumb/gallery7.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery8.jpg" title="Banana">
-        <img src="img/thumb/gallery8.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery9.jpg" title="Banana">
-        <img src="img/thumb/gallery9.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery10.jpg" title="Banana">
-        <img src="img/thumb/gallery10.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery11.jpg" title="Banana">
-        <img src="img/thumb/gallery11.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery13.jpg" title="Banana">
-        <img src="img/thumb/gallery13.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery15.jpg" title="Banana">
-        <img src="img/thumb/gallery15.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery17.jpg" title="Banana">
-        <img src="img/thumb/gallery17.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery19.jpg" title="Banana">
-        <img src="img/thumb/gallery19.jpg" alt="Banana">
-    </a>
-     <a href="img/gallery22.jpg" title="Banana">
-        <img src="img/thumb/gallery22.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery25.jpg" title="Banana">
-        <img src="img/thumb/gallery25.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery27.jpg" title="Banana">
-        <img src="img/thumb/gallery27.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery31.jpg" title="Banana">
-        <img src="img/thumb/gallery31.jpg" alt="Banana">
-    </a>
-    <a href="img/gallery37.jpg" title="Banana">
-        <img src="img/thumb/gallery37.jpg" alt="Banana">
-    </a>
-    </div>
-</div>
-
-
-	<div id="gallery-container" style = "background-color: linen;">
-		<div id="gallery" class="wrapper clearfix">
-
-
+	<div id = "gallery-container" style = "background-color: linen; height: 100%; margin-top: 0px;">
+		<div style = "color:black; background-color: linen; padding-top:20px; padding-bottom: 10px;">
+		<h2 class = "text-center" style = "margin:0 0 0 0;">Gallery</h2>
 		</div>
+		<div class = "container-fluid text-center" style = "background-color: linen; margin-bottom: 20px; margin-left: 0px; width: 100%; padding-bottom: 15px;" id="links">
+	    <a href="img/gallery17.jpg" title="Q&W">
+	        <img src="img/thumb/gallery17.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery5.jpg" title="Q&W">
+	        <img src="img/thumb/gallery5.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery6.jpg" title="Q&W">
+	        <img src="img/thumb/gallery6.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery7.jpg" title="Q&W">
+	        <img src="img/thumb/gallery7.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery8.jpg" title="Q&W">
+	        <img src="img/thumb/gallery8.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery9.jpg" title="Q&W">
+	        <img src="img/thumb/gallery9.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery10.jpg" title="Q&W">
+	        <img src="img/thumb/gallery10.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery11.jpg" title="Q&W">
+	        <img src="img/thumb/gallery11.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery13.jpg" title="Q&W">
+	        <img src="img/thumb/gallery13.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery15.jpg" title="Q&W">
+	        <img src="img/thumb/gallery15.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery17.jpg" title="Q&W">
+	        <img src="img/thumb/gallery17.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery19.jpg" title="Q&W">
+	        <img src="img/thumb/gallery19.jpg" alt="Q&W">
+	    </a>
+	     <a href="img/gallery22.jpg" title="Q&W">
+	        <img src="img/thumb/gallery22.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery25.jpg" title="Q&W">
+	        <img src="img/thumb/gallery25.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery27.jpg" title="Q&W">
+	        <img src="img/thumb/gallery27.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery31.jpg" title="Q&W">
+	        <img src="img/thumb/gallery31.jpg" alt="Q&W">
+	    </a>
+	    <a href="img/gallery37.jpg" title="Q&W">
+	        <img src="img/thumb/gallery37.jpg" alt="Q&W">
+	    </a>
+	    </div>
 	</div>
+
+	<!-- Actual Gallery Images -->
+	<div class = "gallery-container" style = "background-color: #ad2e0e; height: 100%; margin-top: 0px;">
+		<div style = "color:black; background-color: linen; padding-top:20px; padding-bottom: 10px;">
+		<h2 class = "text-center" style = "margin:0 0 0 0;">Letters</h2>
+		</div>
+		<div class = "container-fluid text-center" style = "background-color: linen; margin-bottom: 20px; margin-left: 0px; width: 100%; padding-bottom: 15px;" id="links2">
+	    <a href="img/letter1.jpg" title="Q&W">
+	        <img src="img/thumb/letter1.jpg" alt="Q&W">
+	    </a><a href="img/letter2.jpg" title="Q&W">
+	        <img src="img/thumb/letter2.jpg" alt="Q&W">
+	    </a><a href="img/letter3.jpg" title="Q&W">
+	        <img src="img/thumb/letter3.jpg" alt="Q&W">
+	    </a><a href="img/letter4.jpg" title="Q&W">
+	        <img src="img/thumb/letter4.jpg" alt="Q&W">
+	    </a><a href="img/letter5.jpg" title="Q&W">
+	        <img src="img/thumb/letter5.jpg" alt="Q&W">
+	    </a><a href="img/letter6.jpg" title="Q&W">
+	        <img src="img/thumb/letter6.jpg" alt="Q&W">
+	    </a><a href="img/letter7.jpg" title="Q&W">
+	        <img src="img/thumb/letter7.jpg" alt="Q&W">
+	    </a><a href="img/letter9.jpg" title="Q&W">
+	        <img src="img/thumb/letter9.jpg" alt="Q&W">
+	    </a><a href="img/letter10.jpg" title="Q&W">
+	        <img src="img/thumb/letter10.jpg" alt="Q&W">
+	    </a><a href="img/letter11.jpg" title="Q&W">
+	        <img src="img/thumb/letter11.jpg" alt="Q&W">
+	    </a><a href="img/letter12.jpg" title="Q&W">
+	        <img src="img/thumb/letter12.jpg" alt="Q&W">
+	    </a><a href="img/letter13.jpg" title="Q&W">
+	        <img src="img/thumb/letter13.jpg" alt="Q&W">
+	    </a><a href="img/letter14.jpg" title="Q&W">
+	        <img src="img/thumb/letter14.jpg" alt="Q&W">
+	    </a><a href="img/letter15.jpg" title="Q&W">
+	        <img src="img/thumb/letter15.jpg" alt="Q&W">
+	    </a><a href="img/letter16.jpg" title="Q&W">
+	        <img src="img/thumb/letter16.jpg" alt="Q&W">
+	        </a>
+	    </div>
+	</div>
+
 	<div id="footer-container">
 		<footer class="wrapper">
 			<div class = "row">
@@ -395,6 +484,16 @@ else {
 <!--Gallery Script-->
 <script>
 document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+<script>
+document.getElementById('links2').onclick = function (event) {
     event = event || window.event;
     var target = event.target || event.srcElement,
         link = target.src ? target.parentNode : target,
