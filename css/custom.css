@@ -31,7 +31,7 @@
 .jumbo
  p.social {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .jumbo
  p.social a {
@@ -138,7 +138,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   margin-bottom: 0px;
   /*background-image: url('../img/subtle.png');*/
-  background-image: url('../img/cloudy-day.png');
+  background-image: url('../img/rainbow.jpg');
 }
 #navbar{
   font-family: 'Open Sans Condensed', sans-serif;
