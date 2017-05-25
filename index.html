@@ -94,6 +94,7 @@
 		left:0;
 		right:0;
 		color:black;
+		font-weight: bold;
 		font-size: 40px;
 		 
 		font-family: 'Indie Flower',cursive; 
@@ -118,21 +119,17 @@
 			
 		}
 		.jumbo .daliLama p{
-			
-			font-size: 20px;
+			font-weight: bold;
+			font-size: 22px;
 		}
 	}
 
 	#about-container .img-wrapper img{
 		width:90%;
 		border-radius: 30px;
+		z-index: -1000;
 	}
 
-	#about-container .img-wrapper img{
-		width:90%;
-		border-color: black;
-		border-width: 2px;
-	}
 	#about-container h2{
 		font-family: 'Indie Flower', cursive;
 		font-size:40px;
@@ -238,6 +235,7 @@
 </div>
 
 <!-- Navigation -->
+<div style = "z-index: 10000">
 <div class = "nav-wrapper" style = "height:54px;" >
 <div id = "nav_bar" class = "navbar-custom">
 <div class = "container-fluid">
@@ -254,7 +252,7 @@
   <a class = "navbar-brand XX" style = "font-family: 'Indie Flower', cursive;" href = "#jumbo"><i>Quack &amp; Wabbit</i></a>
   </div>
   
-   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style = "z-index: 100000;">
     <ul class = "nav navbar-nav navbar-right" id = "linkList" style = "font-family: 'Indie Flower', cursive; font-size:20px;">
       <li ><a href="#about-container" class = "XX">About Us</a></li>
       <li><a href="#shows-container" class ="XX">Our Work</a></li>
@@ -269,8 +267,9 @@
 </nav>
 
 </div><!--End Wrapper-->
+</div>
 	
-	<div id="about-container" style = "background-color: linen;">
+	<div id="about-container" style = "background-color: linen; z-index: -10;">
 		<div id="main" class="wrapper clearfix">
 			<div class = "container-fluid">
 				<div class = "row">

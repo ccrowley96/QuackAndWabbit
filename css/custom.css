@@ -142,6 +142,7 @@
 }
 #navbar{
   font-family: 'Open Sans Condensed', sans-serif;
+  z-index: 1000;
 
 }
 .navbar-fixed-top{
@@ -159,6 +160,7 @@
   border-color: black;
   border-width: 2px;
   color:white;
+  z-index: 1000;
 }
 .navbar-header{
   color:white;
