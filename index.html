@@ -4,6 +4,11 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+	<!-- Meta Tags for social sharing -->
+	<meta property="og:image" content="img/qw_logo_social.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="1024">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -68,13 +73,17 @@
 
 	.jumbo .jumboTitle img{
 	position:absolute;
-	width:35vw; 
-	height:45vh;
+	width:400px; 
+	height:auto;
 	left:0;
 	right:0; 
 	margin: auto; 
 	border-radius: 47%;   
 	box-shadow: 10px 10px 5px grey;
+	}
+
+	.jumbo .jumbTitle h1{
+		font-size: 6vw;
 	}
 	
 	.jumbo .scrolldown{
@@ -106,12 +115,7 @@
 	}
 	@media (max-width: 600px){
 		.jumbo .jumboTitle img{
-			position:relative;
-			display:block;
-			margin: auto;
-			width:150px;
-			height:150px;
-			margin-top: 0px;
+			width:300px;
 		}
 		.jumbo .daliLama{
 			position:absolute;
@@ -121,6 +125,18 @@
 		.jumbo .daliLama p{
 			font-weight: bold;
 			font-size: 20px;
+		}
+	}
+
+	@media (max-width: 400px){
+		.jumbo .jumboTitle img{
+			width:200px;
+		}
+	}
+
+	@media (max-height: 500px){
+		.jumbo .daliLama{
+			display: none;
 		}
 	}
 
@@ -211,7 +227,7 @@
 
         <div class="jumboTitle row">
           <div class="col-sm-12">
-            <h1 class="cursive text-center" style = "color:black;font-family: 'Indie Flower', cursive; text-transform: lowercase;  text-transform: capitalize; font-size: 8vw">Quack &amp; Wabbit</h1>
+            <h1 class="cursive text-center" style = "color:black;font-family: 'Indie Flower', cursive; text-transform: lowercase;  text-transform: capitalize;">Quack &amp; Wabbit</h1>
             <img src = "img/qwlogo.png">
           </div>
         </div>
@@ -223,11 +239,6 @@
     
 
   </div>
-  <!--
-  		<div class = "daliLama">
-            	<p>“It is vital that when educating our children’s brains we do not neglect to educate their hearts.” ~ Dalai Lama</p>
-        </div>
-    -->
 
   		<div class = "scrolldown" style = "height:50px;">
             <p class = "text-center"><a class = "XX" href = "#about-container"><i class="arrow fa fa-angle-down fa-5x" style = "color: rgba(25, 25, 25, .7); margin-top: -25px;" aria-hidden="true"></i></a></p>

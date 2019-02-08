@@ -93,13 +93,13 @@
 @media (max-width: 991px) {
   .jumbo
    .cursive {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 @media (max-width: 767px) {
   .jumbo
    .cursive {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 .jumbo
@@ -175,7 +175,7 @@
   color:#18BC9C;
 }
 .navbar-custom .navbar-toggle:hover,
-.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:focus
 {
   background-color: blue;
 }
