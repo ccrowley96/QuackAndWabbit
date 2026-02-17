@@ -291,7 +291,7 @@ body {
    Section Containers
    =================================== */
 .section-container {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 #about-container {
@@ -531,76 +531,74 @@ body {
 }
 
 .resource-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
   margin: 30px 0;
 }
 
 .resource-gallery a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
   text-decoration: none;
-  transition: transform 0.3s ease;
-  max-width: 150px;
-}
-
-.resource-gallery a:hover {
-  transform: scale(1.05);
 }
 
 .resource-gallery img {
-  width: 140px;
-  height: 140px;
+  width: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.resource-gallery img:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .resource-label {
   font-family: 'Cabin', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #555;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.4;
   font-weight: 600;
+  margin-top: 8px;
+  display: block;
 }
 
 /* ===================================
    Gallery Section
    =================================== */
 .gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
   margin: 30px 0;
 }
 
-.gallery-grid a {
+.gallery-grid > a {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid > a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.gallery-grid > a img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
-.gallery-grid a:hover {
+.gallery-grid > a:hover img {
   transform: scale(1.05);
-  z-index: 10;
-}
-
-.gallery-grid img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* ===================================
@@ -786,10 +784,13 @@ body {
     padding: 20px;
   }
   
-  .gallery-grid img,
+  .gallery-grid > a img,
+  .gallery-item img {
+    height: 140px;
+  }
+
   .resource-gallery img {
-    width: 120px;
-    height: 120px;
+    height: 140px;
   }
 }
 
@@ -1011,7 +1012,228 @@ body {
 
 @media only screen and (min-width: 1140px) {
   .wrapper {
-    width: 1026px;
+    width: 1200px;
     margin: 0 auto;
+  }
+}
+
+/* ===================================
+   Resource Item Cards
+   =================================== */
+.resource-item {
+  background: white;
+  border-radius: 14px;
+  padding: 12px 12px 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.resource-img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ===================================
+   Download Buttons
+   =================================== */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 7px 16px;
+  background: #18BC9C;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #149B7E;
+  transform: scale(1.05);
+}
+
+/* ===================================
+   Gallery Item Enhancements
+   =================================== */
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item > a {
+  display: block;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .item-download-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 5;
+  font-size: 13px;
+}
+
+.gallery-item:hover .item-download-btn {
+  opacity: 1;
+}
+
+.gallery-item .item-download-btn:hover {
+  background: #18BC9C;
+  border-color: white;
+  transform: scale(1.15);
+}
+
+/* ===================================
+   Section Action Bar
+   =================================== */
+.section-action-bar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border: 2px solid #18BC9C;
+  background: transparent;
+  color: #18BC9C;
+  border-radius: 30px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.action-btn:hover {
+  background: #18BC9C;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 188, 156, 0.3);
+}
+
+.action-btn i {
+  font-size: 1.1rem;
+}
+
+/* ===================================
+   Print Styles
+   =================================== */
+@media print {
+  .nav-wrapper,
+  .jumbo,
+  .scrolldown,
+  .section-action-bar,
+  .download-btn,
+  .item-download-btn,
+  .action-btn,
+  .footer-container,
+  .donate-bg,
+  #videos-container {
+    display: none !important;
+  }
+
+  .section-container {
+    padding: 20px 0;
+    break-inside: avoid;
+  }
+
+  .gallery-grid,
+  .resource-gallery {
+    gap: 8px;
+  }
+
+  .gallery-grid > a img,
+  .resource-gallery img,
+  .gallery-item img {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .resource-item {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+}
+
+/* ===================================
+   Responsive - New Elements
+   =================================== */
+@media (max-width: 767px) {
+  .resource-item {
+    padding: 10px;
+  }
+
+  .gallery-item img {
+    height: 140px;
+  }
+
+  .gallery-item .item-download-btn {
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .action-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    font-size: 0.8rem;
+    padding: 5px 12px;
   }
 }
